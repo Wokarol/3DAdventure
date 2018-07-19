@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Wokarol {
-	[CreateAssetMenu]
+	[CreateAssetMenu(menuName = "Utils/TimeController")]
 	public class TimeController : ScriptableObject {
 		[SerializeField] float baseFixedDeltaTime = 0.02f;
 

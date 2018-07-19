@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Wokarol {
-	[CreateAssetMenu]
+	[CreateAssetMenu(menuName = "Utils/Logger")]
 	public class Logger : ScriptableObject {
 		public void Log (string text) {
 			Debug.Log(text);
