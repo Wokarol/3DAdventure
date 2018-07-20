@@ -21,6 +21,8 @@ namespace Wokarol
 		bool slowWalk;
 		bool sprint;
 
+		bool jump;
+
 
 		MovementController movementController;
 
@@ -41,6 +43,8 @@ namespace Wokarol
 
 			slowWalk = Input.GetButton("SlowWalk");
 			sprint = Input.GetButton("Sprint");
+
+			jump = Input.GetButtonDown("Jump");
 		}
 
 		private void FixedUpdate ()
@@ -50,7 +54,13 @@ namespace Wokarol
 				moveInput.Normalize();
 			}
 
-			movementController.Move(moveInput, turnInput * mouseXSensivity, slowWalk, sprint);
+			movementController.Move(moveInput, slowWalk, sprint);
+			movementController.Rotate(turnInput * mouseXSensivity);
+
+			if (jump) {
+				movementController.Jump();
+				jump = false;
+			}
 
 			camController.RotateY(camTurnInput * mouseYSensivity);
 		}

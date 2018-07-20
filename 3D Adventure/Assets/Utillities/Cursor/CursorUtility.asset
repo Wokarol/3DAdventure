@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b67c42232cfb8841bd458bc22d990e6, type: 3}
-  m_Name: Cursor Visibilty Utility
+  m_Name: CursorUtility
   m_EditorClassIdentifier: 
