@@ -8,19 +8,23 @@ namespace Wokarol
 	[RequireComponent(typeof(Rigidbody))]
 	public class MovementController : MonoBehaviour
 	{
+
+		const float groundCheckRadius = 0.3f;
+
 		// Variables
 		public float speed = 4;
 		public float nonForwardSpeedMultiplier = 0.5f;
-
 		public float slowWalkMultiplier = 0.5f;
 		public float sprintMultiplier = 2f;
-
 		[Space]
 		public float jumpForce = 5;
-
+		[Space]
+		public LayerMask groundMask;
+		public Vector3 groundCheckOffset;
 
 		float forwardThreshhold = 0.65f;
 		float yRotation;
+		bool isGrounded;
 
 		new Rigidbody rigidbody;
 
@@ -33,6 +37,16 @@ namespace Wokarol
 		private void Start ()
 		{
 			yRotation = transform.rotation.eulerAngles.y;
+		}
+
+		private void Update ()
+		{
+			isGrounded = IsOnGround();
+		}
+
+		private bool IsOnGround ()
+		{
+			return (Physics.OverlapSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius, groundMask).Length > 0);
 		}
 
 		public void Move (Vector3 moveInput, bool slowWalk, bool sprint)
@@ -71,7 +85,15 @@ namespace Wokarol
 
 		public void Jump ()
 		{
+			if (!isGrounded) {
+				return;
+			}
 			rigidbody.AddForce(Vector3.up * jumpForce * rigidbody.mass, ForceMode.Impulse);
+		}
+
+		private void OnDrawGizmos ()
+		{
+			Gizmos.DrawWireSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius);
 		}
 	}
 }
