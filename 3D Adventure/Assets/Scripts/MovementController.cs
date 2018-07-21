@@ -91,7 +91,7 @@ namespace Wokarol
 			rigidbody.AddForce(Vector3.up * jumpForce * rigidbody.mass, ForceMode.Impulse);
 		}
 
-		private void OnDrawGizmos ()
+		private void OnDrawGizmosSelected ()
 		{
 			Gizmos.DrawWireSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius);
 		}
