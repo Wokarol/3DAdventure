@@ -23,6 +23,17 @@ namespace Wokarol
 
 		bool jump;
 
+		[Header("InputData")]
+		[SerializeField] FloatVariableReference forwardInputData;
+		[SerializeField] FloatVariableReference strafeInputData;
+		[SerializeField] FloatVariableReference turnInputData;
+		[SerializeField] FloatVariableReference camTurnInputData;
+
+		[SerializeField] BoolVariableReference slowWalkData;
+		[SerializeField] BoolVariableReference sprintData;
+
+		[SerializeField] BoolVariableReference jumpData;
+
 
 		MovementController movementController;
 
@@ -34,17 +45,21 @@ namespace Wokarol
 
 		private void Update ()
 		{
-			forwardInput = Input.GetAxisRaw("Vertical");
-			strafeInput = Input.GetAxisRaw("Horizontal");
+			forwardInputData.Value = forwardInput = Input.GetAxisRaw("Vertical");
+			strafeInputData.Value = strafeInput = Input.GetAxisRaw("Horizontal");
 
-			turnInput = Input.GetAxisRaw("Look X");
+			turnInputData.Value = turnInput = Input.GetAxisRaw("Look X");
 
-			camTurnInput = Input.GetAxisRaw("Look Y");
+			camTurnInputData.Value = camTurnInput = Input.GetAxisRaw("Look Y");
 
-			slowWalk = Input.GetButton("SlowWalk");
-			sprint = Input.GetButton("Sprint");
+			slowWalkData.Value = slowWalk = Input.GetButton("SlowWalk");
+			sprintData.Value = sprint = Input.GetButton("Sprint");
 
 			jump = Input.GetButtonDown("Jump");
+			if (Input.GetButtonDown("Jump")) {
+
+			}
+			jumpData.Value = Input.GetButton("Jump");
 		}
 
 		private void FixedUpdate ()
@@ -59,6 +74,7 @@ namespace Wokarol
 
 			if (jump) {
 				movementController.Jump();
+				Debug.Log(":OnScreen:Pressed jump!!!");
 				jump = false;
 			}
 

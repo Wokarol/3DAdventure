@@ -9,6 +9,7 @@ namespace Wokarol
 	{
 		// Variables
 		[SerializeField] BoolVariableReference boolValue;
+		[SerializeField] FloatMaxMin AlphaValues;
 
 		CanvasGroup canvasGroup;
 		// Functions
@@ -19,7 +20,7 @@ namespace Wokarol
 
 		private void Update ()
 		{
-			canvasGroup.alpha = boolValue.Value ? 1 : 0;
+			canvasGroup.alpha = boolValue.Value ? AlphaValues.max : AlphaValues.min;
 		}
 	}
 }

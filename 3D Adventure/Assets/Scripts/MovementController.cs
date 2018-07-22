@@ -21,7 +21,9 @@ namespace Wokarol
 		public float jumpForce = 5;
 		[Space]
 		public LayerMask groundMask;
-		public Vector3 groundCheckOffset;
+		public Vector3 raycastOffset;
+		public float raycastLenght;
+
 		[Header("Scriptables")]
 		public BoolVariableReference isGrounded;
 
@@ -49,7 +51,7 @@ namespace Wokarol
 
 		private bool IsOnGround ()
 		{
-			return (Physics.OverlapSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius, groundMask).Length > 0);
+			return (Physics.Raycast(transform.position + raycastOffset, Vector3.down, raycastLenght, groundMask));
 		}
 
 		public void Move (Vector3 moveInput, bool slowWalk, bool sprint)
@@ -96,7 +98,8 @@ namespace Wokarol
 
 		private void OnDrawGizmosSelected ()
 		{
-			Gizmos.DrawWireSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius);
+			//Gizmos.DrawWireSphere(transform.TransformVector(groundCheckOffset) + transform.position, groundCheckRadius);
+			Gizmos.DrawRay(transform.position + raycastOffset, Vector3.down * raycastLenght);
 		}
 	}
 }
