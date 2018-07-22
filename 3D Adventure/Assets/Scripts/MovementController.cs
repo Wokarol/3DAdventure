@@ -12,6 +12,7 @@ namespace Wokarol
 		const float groundCheckRadius = 0.3f;
 
 		// Variables
+		[Header("Settings")]
 		public float speed = 4;
 		public float nonForwardSpeedMultiplier = 0.5f;
 		public float slowWalkMultiplier = 0.5f;
@@ -21,10 +22,12 @@ namespace Wokarol
 		[Space]
 		public LayerMask groundMask;
 		public Vector3 groundCheckOffset;
+		[Header("Scriptables")]
+		public BoolVariableReference isGrounded;
+
 
 		float forwardThreshhold = 0.65f;
 		float yRotation;
-		bool isGrounded;
 
 		new Rigidbody rigidbody;
 
@@ -41,7 +44,7 @@ namespace Wokarol
 
 		private void Update ()
 		{
-			isGrounded = IsOnGround();
+			isGrounded.Value = IsOnGround();
 		}
 
 		private bool IsOnGround ()
@@ -85,7 +88,7 @@ namespace Wokarol
 
 		public void Jump ()
 		{
-			if (!isGrounded) {
+			if (!isGrounded.Value) {
 				return;
 			}
 			rigidbody.AddForce(Vector3.up * jumpForce * rigidbody.mass, ForceMode.Impulse);
