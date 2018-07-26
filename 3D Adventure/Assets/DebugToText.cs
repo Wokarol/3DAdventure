@@ -31,10 +31,12 @@ namespace Wokarol
 		void HandleLog (string logString, string stackTrace, LogType type)
 		{
 			var text = textMesh.text;
-			string textToShow = logString.Replace(lookUpString, "");
-			text += textToShow;
-			text += "\n";
-			textMesh.text = text;
+			if (logString.Contains(lookUpString)) {
+				string textToShow = logString.Replace(lookUpString, "");
+				text += textToShow;
+				text += "\n";
+				textMesh.text = text;
+			}
 		}
 
 	}
