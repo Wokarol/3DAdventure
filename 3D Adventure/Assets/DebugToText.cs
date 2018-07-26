@@ -20,6 +20,13 @@ namespace Wokarol
 			textMesh.text = "";
 		}
 
+		private void Update ()
+		{
+			if (Input.GetKeyDown(KeyCode.F8)) {
+				textMesh.text = "";
+			}
+		}
+
 		void OnEnable ()
 		{
 			Application.logMessageReceived += HandleLog;

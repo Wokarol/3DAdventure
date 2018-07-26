@@ -11,7 +11,7 @@ namespace Wokarol
 		[SerializeField] float mouseXSensivity = 3;
 		[SerializeField] float mouseYSensivity = 3;
 		[Space]
-		[SerializeField] FirstPersonCamController camController;
+		[SerializeField] CamController camController;
 
 		float forwardInput;
 		float strafeInput;
@@ -55,9 +55,9 @@ namespace Wokarol
 			slowWalkData.Value = slowWalk = Input.GetButton("SlowWalk");
 			sprintData.Value = sprint = Input.GetButton("Sprint");
 
-			jump = Input.GetButtonDown("Jump");
+			//jump = Input.GetButtonDown("Jump");
 			if (Input.GetButtonDown("Jump")) {
-
+				jump = true;
 			}
 			jumpData.Value = Input.GetButton("Jump");
 		}
@@ -79,6 +79,11 @@ namespace Wokarol
 			}
 
 			camController.RotateY(camTurnInput * mouseYSensivity);
+		}
+
+		public void SetCamController (CamController _camController)
+		{
+			camController = _camController;
 		}
 	}
 }

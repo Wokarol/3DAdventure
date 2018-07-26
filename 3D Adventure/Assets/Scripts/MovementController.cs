@@ -51,7 +51,8 @@ namespace Wokarol
 
 		private bool IsOnGround ()
 		{
-			return (Physics.Raycast(transform.position + raycastOffset, Vector3.down, raycastLenght, groundMask));
+			RaycastHit hit;
+			return (Physics.SphereCast(transform.position + raycastOffset, 0.1f, Vector3.down,out hit, raycastLenght, groundMask));
 		}
 
 		public void Move (Vector3 moveInput, bool slowWalk, bool sprint)

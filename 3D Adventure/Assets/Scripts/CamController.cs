@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Wokarol
 {
-	public class FirstPersonCamController : MonoBehaviour 
+	public class CamController : MonoBehaviour 
 	{
 		// Variables
 		[SerializeField] FloatMaxMin camVerticalLimit = new FloatMaxMin(-50, 50);

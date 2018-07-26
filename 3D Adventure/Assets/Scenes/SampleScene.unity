@@ -1835,7 +1835,7 @@ MonoBehaviour:
     ScriptableVariable: {fileID: 11400000, guid: 33bcbed6964ce4645b5263b368fde844,
       type: 2}
     ConstantValue: 0
-  smoothTime: 1
+  smoothTime: 0.1
 --- !u!114 &542322364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2811,6 +2811,7 @@ GameObject:
   - component: {fileID: 837325635}
   - component: {fileID: 837325634}
   - component: {fileID: 837325633}
+  - component: {fileID: 837325638}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2870,7 +2871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseXSensivity: 150
   mouseYSensivity: 150
-  camController: {fileID: 1261163507}
+  camController: {fileID: 901387955}
   forwardInputData:
     UseConstant: 0
     ScriptableVariable: {fileID: 11400000, guid: 9970a3711b68f9f4893aaf29548a83fa,
@@ -2932,10 +2933,100 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1261163506}
+  - {fileID: 901387954}
   - {fileID: 1411506111}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -125, z: 0}
+--- !u!114 &837325638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837325632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d8c4c9e9dc49544aea7fb97654a8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPP: 0
+  key: 101
+  FPPEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1261163505}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 901387953}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 837325635}
+        m_MethodName: SetCamController
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 901387955}
+          m_ObjectArgumentAssemblyTypeName: Wokarol.CamController, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  TPPEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1261163505}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 901387953}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 837325635}
+        m_MethodName: SetCamController
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1261163507}
+          m_ObjectArgumentAssemblyTypeName: Wokarol.CamController, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &846075676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,6 +3185,126 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 855603178}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &901387953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901387954}
+  - component: {fileID: 901387959}
+  - component: {fileID: 901387958}
+  - component: {fileID: 901387957}
+  - component: {fileID: 901387956}
+  - component: {fileID: 901387955}
+  m_Layer: 0
+  m_Name: FPCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &901387954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 837325637}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901387955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36207c04039ec1243b3546d82cb85061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camVerticalLimit:
+    max: 80
+    min: -80
+--- !u!114 &901387956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: b95027b9785d9a245a56e43e1c493d86, type: 2}
+--- !u!114 &901387957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1870ba52788ea408703225536ae767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 4096
+--- !u!81 &901387958
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_Enabled: 1
+--- !u!20 &901387959
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901387953}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &921682659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,7 +3834,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984218904}
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0.6, y: 2.5, z: -6}
+  m_LocalPosition: {x: 0.6, y: 1.6, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1261163506}
@@ -3884,6 +4095,7 @@ GameObject:
   - component: {fileID: 1117738584}
   - component: {fileID: 1117738583}
   - component: {fileID: 1117738582}
+  - component: {fileID: 1117738587}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3980,6 +4192,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1117738587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117738581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168a8cdfa9b033d41af0503c091b0394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugMode: 0
+  objects:
+  - {fileID: 1741502162}
+  - {fileID: 960750316}
 --- !u!1 &1120280488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,8 +4644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camVerticalLimit:
-    max: 50
-    min: -65
+    max: 60
+    min: -90
 --- !u!114 &1261163509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4434,29 +4661,56 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -65
+      time: -90
       value: 0
       inSlope: 0
-      outSlope: 0.0076923077
-      tangentMode: 69
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
+      time: -70
+      value: 0.008535352
+      inSlope: 0.00059923704
+      outSlope: 0.0033498616
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.46704102
+      outWeight: 0.29052076
+    - serializedVersion: 3
+      time: -34.329933
+      value: 0.2668019
+      inSlope: 0.009510124
+      outSlope: 0.010259545
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.19913189
+      outWeight: 0.2447577
+    - serializedVersion: 3
       time: 0
       value: 0.5
-      inSlope: 0.0076923077
-      outSlope: 0.01
-      tangentMode: 69
+      inSlope: 0.0004830895
+      outSlope: 0.0013706561
+      tangentMode: 1
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.43585303
+      outWeight: 0.25734708
     - serializedVersion: 3
-      time: 50
+      time: 40
+      value: 0.98401606
+      inSlope: 0.018945944
+      outSlope: 0.0013574037
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.107053
+      outWeight: 0.7316391
+    - serializedVersion: 3
+      time: 60
       value: 1
-      inSlope: 0.01
+      inSlope: 0
       outSlope: 0
-      tangentMode: 69
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -4661,7 +4915,7 @@ MonoBehaviour:
     ScriptableVariable: {fileID: 11400000, guid: 4848f1d5f15ef2843af39848177ded78,
       type: 2}
     ConstantValue: 0
-  smoothTime: 1
+  smoothTime: 0.1
 --- !u!114 &1297447436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4899,7 +5153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 837325637}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1411506112
 MeshRenderer:
@@ -6109,7 +6363,7 @@ MonoBehaviour:
     ScriptableVariable: {fileID: 11400000, guid: 3c74a368c3585934a9372d61eb73c292,
       type: 2}
     ConstantValue: 0
-  smoothTime: 1
+  smoothTime: 0.1
 --- !u!114 &1741334047
 MonoBehaviour:
   m_ObjectHideFlags: 0
