@@ -40,6 +40,7 @@ namespace Wokarol
 			var text = textMesh.text;
 			if (logString.Contains(lookUpString)) {
 				string textToShow = logString.Replace(lookUpString, "");
+				textToShow = Time.frameCount + ": " + textToShow;
 				text += textToShow;
 				text += "\n";
 				textMesh.text = text;

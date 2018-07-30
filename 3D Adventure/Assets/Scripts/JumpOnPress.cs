@@ -11,6 +11,19 @@ namespace Wokarol
 		[SerializeField] float torgueForce = 20;
 
 		new Rigidbody rigidbody;
+
+		public string InteractionText {
+			get {
+				return "Make me jump";
+			}
+		}
+
+		public float InteractionDistanceMultiplier {
+			get {
+				return 1000;
+			}
+		}
+
 		// Functions
 		private void Awake ()
 		{
