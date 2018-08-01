@@ -24,10 +24,10 @@ namespace Wokarol
 		private void FixedUpdate ()
 		{
 			if (waitForThrow) {
-				rigidbody.AddForce(force * transform.forward);
+				rigidbody.AddForce(force * transform.forward, ForceMode.Impulse);
 
 				Vector3 torgueDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-				rigidbody.AddTorque(torgueDirection * angularForce);
+				rigidbody.AddTorque(torgueDirection * angularForce, ForceMode.Impulse);
 
 				waitForThrow = false;
 			}

@@ -9,6 +9,8 @@ namespace Wokarol
 	public class ChangeColorOnPress : MonoBehaviour, IInteractible
 	{
 		// Variables
+		[SerializeField] bool startFromColors = false;
+		[SerializeField] float interactionDistanceMultiplier = 1;
 
 		[SerializeField] Color[] colors = new Color[]{Color.blue, Color.green};
 		int nextColorIndex = 0;
@@ -26,7 +28,7 @@ namespace Wokarol
 
 		public float InteractionDistanceMultiplier {
 			get {
-				return 1;
+				return interactionDistanceMultiplier;
 			}
 		}
 
@@ -37,6 +39,11 @@ namespace Wokarol
 			renderer = GetComponent<Renderer>();
 			light = GetComponent<Light>();
 			propertyBlock = new MaterialPropertyBlock();
+
+			if (startFromColors) {
+				var color = GetNewColor();
+				SetColor(color);
+			}
 		}
 
 		public void Interact ()
