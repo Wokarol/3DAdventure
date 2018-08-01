@@ -41,7 +41,6 @@ namespace Wokarol
 			Physics.Raycast(transform.position, transform.forward, out hit, 10000, mask);
 
 			if (currentTransform != hit.transform) {
-				Debug.Log(":OnScreen:New interaction target");
 				currentTransform = hit.transform;
 				if (currentTransform != null) {
 					currentInteractible = currentTransform.GetComponent<IInteractible>();

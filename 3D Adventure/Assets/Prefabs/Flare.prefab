@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 108718009526860668}
   - component: {fileID: 114090705263344350}
   - component: {fileID: 114674526353377082}
+  - component: {fileID: 114029445155636240}
   m_Layer: 13
   m_Name: Flare
   m_TagString: Untagged
@@ -105,14 +106,14 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65427620149570170
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999609727578788}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 179773a6d8d1b7041aba891f1e06d808, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -173,6 +174,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114029445155636240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999609727578788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433d6566d30edd4408e320188bb1dd9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114090705263344350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,7 +200,7 @@ MonoBehaviour:
   frequency: 5
   intensityMinMax:
     max: 1
-    min: 0.9
+    min: 1
 --- !u!114 &114674526353377082
 MonoBehaviour:
   m_ObjectHideFlags: 1
