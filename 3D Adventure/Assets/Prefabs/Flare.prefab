@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 65427620149570170}
   - component: {fileID: 114721424222978806}
   - component: {fileID: 108718009526860668}
+  - component: {fileID: 114090705263344350}
+  - component: {fileID: 114674526353377082}
   m_Layer: 13
   m_Name: Flare
   m_TagString: Untagged
@@ -144,7 +146,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.3
+  m_Intensity: 1.0734041
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -171,6 +173,99 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114090705263344350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999609727578788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecf2760f8ffd5b4480acfcf1126e201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perlinNoiseMultiplier: 10
+  frequency: 5
+  intensityMinMax:
+    max: 1
+    min: 0.9
+--- !u!114 &114674526353377082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999609727578788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acb1b1d677f3f04e803fdf43d82e5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  onOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7bdba8b5f659fed4881ce69dbf461165, type: 2}
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On!!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114090705263344350}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7bdba8b5f659fed4881ce69dbf461165, type: 2}
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Off!!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114090705263344350}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114721424222978806}
+        m_MethodName: set_Intensity
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114721424222978806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,5 +277,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8c0873068f39246bd025381510b37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 1
+  intensity: 0.98583394
   lightMaterialIndex: 1

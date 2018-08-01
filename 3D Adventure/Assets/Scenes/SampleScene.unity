@@ -552,25 +552,6 @@ Prefab:
       propertyPath: m_Name
       value: Flare (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108718009526860668, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: lightMaterialIndex
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
   m_IsPrefabAsset: 0
@@ -1078,25 +1059,6 @@ Prefab:
       propertyPath: m_Name
       value: Flare (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108718009526860668, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: lightMaterialIndex
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
   m_IsPrefabAsset: 0
@@ -1244,30 +1206,6 @@ Prefab:
     - target: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
       propertyPath: m_Name
       value: Flare (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 54448659811845326, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108718009526860668, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114721424222978806, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-        type: 2}
-      propertyPath: lightMaterialIndex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a, type: 2}
@@ -6081,26 +6019,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1323108762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-    type: 2}
-  m_PrefabInternal: {fileID: 288348888}
---- !u!114 &1323108763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323108762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecf2760f8ffd5b4480acfcf1126e201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perlinNoiseTest:
-    UseConstant: 0
-    ScriptableVariable: {fileID: 0}
-    ConstantValue: 0
 --- !u!1 &1332947048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,26 +6742,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588633784}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1588935135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-    type: 2}
-  m_PrefabInternal: {fileID: 167580517}
---- !u!114 &1588935136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1588935135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecf2760f8ffd5b4480acfcf1126e201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perlinNoiseTest:
-    UseConstant: 0
-    ScriptableVariable: {fileID: 0}
-    ConstantValue: 0
 --- !u!1 &1592455149
 GameObject:
   m_ObjectHideFlags: 0
@@ -6911,7 +6809,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Version 0.2.4b292 made by Wokarol
+  m_text: Version 0.2.6b326 made by Wokarol
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -8506,46 +8404,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869262007}
   m_CullTransparentMesh: 0
---- !u!1 &1951112298 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-    type: 2}
-  m_PrefabInternal: {fileID: 332662576}
---- !u!114 &1951112299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951112298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecf2760f8ffd5b4480acfcf1126e201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perlinNoiseTest:
-    UseConstant: 0
-    ScriptableVariable: {fileID: 0}
-    ConstantValue: 0
---- !u!1 &1971325096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1999609727578788, guid: 8d9d17e2d7268ce4ca2ca4b0003fd22a,
-    type: 2}
-  m_PrefabInternal: {fileID: 715118930}
---- !u!114 &1971325097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1971325096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecf2760f8ffd5b4480acfcf1126e201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perlinNoiseTest:
-    UseConstant: 0
-    ScriptableVariable: {fileID: 0}
-    ConstantValue: 0
 --- !u!1 &2058013176
 GameObject:
   m_ObjectHideFlags: 0
