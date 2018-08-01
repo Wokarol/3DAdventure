@@ -200,7 +200,7 @@ MonoBehaviour:
   frequency: 5
   intensityMinMax:
     max: 1
-    min: 1
+    min: 0.95
 --- !u!114 &114674526353377082
 MonoBehaviour:
   m_ObjectHideFlags: 1
