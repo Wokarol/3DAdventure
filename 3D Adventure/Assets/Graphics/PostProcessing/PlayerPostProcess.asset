@@ -55,19 +55,19 @@ MonoBehaviour:
       reflection:
         blendType: 0
         reflectionQuality: 0
-        maxDistance: 143
-        iterationCount: 636
-        stepSize: 3
+        maxDistance: 125
+        iterationCount: 363
+        stepSize: 1
         widthModifier: 0.5
-        reflectionBlur: 1
+        reflectionBlur: 1.41
         reflectBackfaces: 0
       intensity:
-        reflectionMultiplier: 1
-        fadeDistance: 100
+        reflectionMultiplier: 1.27
+        fadeDistance: 242
         fresnelFade: 1
         fresnelFadePower: 0.17
       screenEdgeMask:
-        intensity: 0.063
+        intensity: 0.025
   depthOfField:
     m_Enabled: 0
     m_Settings:
