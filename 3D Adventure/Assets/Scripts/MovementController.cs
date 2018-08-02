@@ -82,7 +82,7 @@ namespace Wokarol
 		}
 		public void Rotate (float value)
 		{
-			yRotation += Time.deltaTime * value;
+			yRotation += Time.fixedDeltaTime * value;
 
 			var rotation = transform.rotation.eulerAngles;
 			rotation.y = yRotation;

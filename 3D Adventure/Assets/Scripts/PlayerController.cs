@@ -49,6 +49,7 @@ namespace Wokarol
 			strafeInputData.Value = strafeInput = Input.GetAxisRaw("Horizontal");
 
 			turnInputData.Value = turnInput = Input.GetAxisRaw("Look X");
+			//turnInputData.Value = turnInput = 1;
 
 			camTurnInputData.Value = camTurnInput = Input.GetAxisRaw("Look Y");
 
